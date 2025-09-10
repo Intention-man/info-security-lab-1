@@ -75,6 +75,41 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.8.3.1</version>
+                <configuration>
+                    <failOnError>true</failOnError>
+                    <effort>Max</effort>
+                    <threshold>Low</threshold>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>9.0.9</version> <!-- Используйте актуальную версию -->
+                <configuration>
+                    <skipTestScope>true</skipTestScope>
+                    <reportOutputDirectory>${project.build.directory}/reports</reportOutputDirectory>
+                    <failBuildOnCVSS>7.0</failBuildOnCVSS>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!-- Цель 'check' запускает сканирование -->
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
