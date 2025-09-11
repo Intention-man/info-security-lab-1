@@ -95,16 +95,14 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>9.0.9</version> <!-- Используйте актуальную версию -->
+                <version>9.0.9</version>
                 <configuration>
                     <skipTestScope>true</skipTestScope>
-                    <reportOutputDirectory>${project.build.directory}/reports</reportOutputDirectory>
                     <failBuildOnCVSS>7.0</failBuildOnCVSS>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <!-- Цель 'check' запускает сканирование -->
                             <goal>check</goal>
                         </goals>
                     </execution>
