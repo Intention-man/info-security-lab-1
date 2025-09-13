@@ -21,14 +21,14 @@ public class SecureApiApplication {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    CommandLineRunner init(UserRepository userRepository, PasswordEncoder passwordEncoder) {
-        return args -> {
-            // Инициализация тестового пользователя
-            User admin = new User();
-            admin.setUsername("admin");
-            admin.setPassword(passwordEncoder.encode("password"));
-            userRepository.save(admin);
-        };
-    }
+//    @Bean
+//    CommandLineRunner init(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+//        return args -> {
+//            // Инициализация тестового пользователя
+//            User admin = new User();
+//            admin.setUsername("admin");
+//            admin.setPassword(passwordEncoder.encode("password"));
+//            userRepository.save(admin);
+//        };
+//    }
 }

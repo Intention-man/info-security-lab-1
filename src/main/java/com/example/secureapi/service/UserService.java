@@ -25,7 +25,7 @@ public class UserService {
 
     public ResponseEntity<AuthRes> registration(AuthRequest registerRequest) {
         if (userRepository.findByUsername(registerRequest.getUsername()).isPresent()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
         }
         User user = new User();
         user.setUsername(registerRequest.getUsername());
