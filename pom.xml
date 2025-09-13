@@ -97,6 +97,7 @@
                 <artifactId>dependency-check-maven</artifactId>
                 <configuration>
                     <failBuildOnCVSS>7.0</failBuildOnCVSS>
+                    <nvdApiKey>${nvd.api.key}</nvdApiKey>
                 </configuration>
                 <executions>
                     <execution>
