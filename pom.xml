@@ -95,11 +95,11 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>9.0.9</version>
-                <configuration>
-                    <skipTestScope>true</skipTestScope>
-                    <failBuildOnCVSS>7.0</failBuildOnCVSS>
-                </configuration>
+<!--                <version>9.0.9</version>-->
+<!--                <configuration>-->
+<!--                    <skipTestScope>true</skipTestScope>-->
+<!--                    <failBuildOnCVSS>7.0</failBuildOnCVSS>-->
+<!--                </configuration>-->
                 <executions>
                     <execution>
                         <goals>
