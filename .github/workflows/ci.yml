@@ -29,17 +29,6 @@ jobs:
       - name: Run SAST Scan (SpotBugs)
         run: mvn -B spotbugs:check
 
-      - name: Run OWASP Dependency Check
-        uses: dependency-check/Dependency-Check_Action@main
-        with:
-          project: 'info-security-lab-1'
-          path: '.'
-          format: 'HTML'
-          args: >
-            --enableRetired
-            --nvdApiKey ${{ secrets.NVD_API_KEY }}
-
-
       - name: Run SCA Scan (OWASP Dependency-Check)
         run: mvn -B dependency-check:check -Dnvd.api.key=${{ secrets.NVD_API_KEY }}
 
