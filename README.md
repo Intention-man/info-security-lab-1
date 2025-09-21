@@ -140,3 +140,10 @@ HTTP Status: 403 Forbidden
 **Дополнительно:**
 - Stateless архитектура (без серверных сессий)
 - CSRF отключен в пользу JWT-валидации
+
+
+### 4. Отчёты SAST/SCA
+
+![img.png](sast_report.png)
+
+![img_1.png](sca_report.png)
